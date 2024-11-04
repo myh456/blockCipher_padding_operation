@@ -25,7 +25,7 @@ int main(int argc, char const* argv[]) {
     op = Operation(key, OperationMode::CBC);
     cout << "密文:" << endl;
     cipher = op.enc(pd.generateBlock(M), iv);
-    cout << pd.restoreBlock(cipher) << endl;;
+    cout << pd.restoreBlock(cipher) << endl;
     cout << "明文:" << endl;
     cout << pd.restoreBlock(op.dec(cipher, iv)) << endl;
     return 0;
